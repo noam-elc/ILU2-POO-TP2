@@ -13,7 +13,7 @@ public class ControlPrendreEtal {
 	}
 
 	public boolean resteEtals() {
-		return !village.rechercherEtalVide();
+		return village.rechercherEtalVide();
 	}
 
 	public int prendreEtal(String nomVendeur, String produit, int nbProduit) {
@@ -21,10 +21,10 @@ public class ControlPrendreEtal {
 		int numeroEtal = village.installerVendeur(gaulois, produit, nbProduit);
 		if (numeroEtal != -1)
 			System.out.println("Le vendeur " + nomVendeur + " s'est installé à l'étal n°" + numeroEtal);
-		return numeroEtal;
+		return numeroEtal+1;
 	}
 
 	public boolean verifierIdentite(String nomVendeur) {
-		return !controlVerifierIdentite.verifierIdentite(nomVendeur);
+		return controlVerifierIdentite.verifierIdentite(nomVendeur);
 	}
 }
